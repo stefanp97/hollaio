@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  organization: MyString
+  teamname: MyString
+  tenant: one
+
+two:
+  organization: MyString
+  teamname: MyString
+  tenant: two
