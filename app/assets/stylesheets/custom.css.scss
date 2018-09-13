@@ -1,1 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans');
 @import "bootstrap";
+
+body {
+  font-family: 'Open Sans', sans-serif;
+
+  .navbar-brand {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 20pt;
+  }
+
+  .copy-header {
+    font-family: 'Lato', sans-serif!important;
+  }
+
+  section#cta-main {
+    padding-top: 30px;
+    min-height: 30vh;
+    max-height: 30vh;
+    height: 30vh;
+
+    .copy-header-h1 {
+      font-size: 58px;
+      font-weight: 700;
+    }
+
+    .btn-primary {
+      margin-top: 55px!important;
+    }
+  }
+
+  section#intro {
+    padding-top: 30px;
+
+    .copy-header-h2 {
+      margin-bottom: 20px;
+      font-size: 40px;
+      font-weight: 700;
+    }
+  }
+
+  section#testimonial {
+    padding-top: 30px;
+
+    .copy-header-h2 {
+      margin-bottom: 20px;
+      font-size: 40px;
+      font-weight: 700;
+    }
+
+    .testimonial-name {
+      display: block;
+      margin-bottom: 35px;
+      font-weight: 700;
+    }
+  }
+
+  section#cta-final {
+    padding-top: 30px;
+
+    .copy-header-h2 {
+      font-size: 40px;
+      font-weight: 700;
+    }
+  }
+
+  section#footer {
+    margin-top: 50px;
+    min-height: 30vh;
+    max-height: 30vh;
+    height: 30vh;
+
+    ul {
+      list-style: none;
+
+      li {
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
