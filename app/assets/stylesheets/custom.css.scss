@@ -16,6 +16,10 @@ body {
       background-color: $lavendel!important;
       border-color: $lavendel!important;
     }
+    .nav-link, .dropdown-toggle {
+      font-size: 25px!important;
+      padding-left: 25px!important;
+    }
   }
 
   .navbar-brand {
