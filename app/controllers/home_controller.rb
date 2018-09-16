@@ -20,4 +20,6 @@ params[:tenant_id] = @tenant.id
 
 end
   end
+  def pricing
+  end
 end

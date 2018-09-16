@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans');
 @import "bootstrap";
+$grey: #f4f4f5;
 
 body {
   font-family: 'Open Sans', sans-serif;
+  background-color: $grey;
 
   .navbar {
-    margin-bottom: 35px;
     height: 70px!important;
+    background-color: white!important;
   }
 
   .navbar-brand {
@@ -20,22 +22,21 @@ body {
   }
 
   section#cta-main {
-    padding-top: 30px;
+    padding-top: 60px;
     min-height: 30vh;
     max-height: 30vh;
     height: 30vh;
+    background-image: linear-gradient(135deg, #CE9FFC 10%, #7367F0 100%);
 
     .copy-header-h1 {
       font-size: 58px;
       font-weight: 700;
-    }
-
-    .btn-primary {
-      margin-top: 55px!important;
+      color: white;
     }
   }
 
   section#intro {
+    background-color: $grey;
     padding-top: 30px;
 
     .copy-header-h2 {

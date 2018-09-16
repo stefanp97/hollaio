@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :tenants do
-      resources :teams
+  resources :teams
   end
   resources :members
   get 'home/index'
@@ -18,4 +18,5 @@ Rails.application.routes.draw do
     :passwords => "milia/passwords",
   }
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
 end

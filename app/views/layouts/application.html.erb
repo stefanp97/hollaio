@@ -20,21 +20,21 @@
         <ul class="navbar-nav ml-auto">
           <% if current_user %>
 
-            <li class="nav-item active user-name">
+            <div class="dropdown">
+              <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown link
+              </a>
 
-              <%= link_to ('<i class="fa fa-user"></i> ' + truncate(current_user.email, length: 25)).html_safe, edit_user_registration_path, title: 'Edit Profile' %>
-
-            </li>
-
-            <li class="nav-item logout"><%= link_to('Logout', destroy_user_session_path, class: 'btn btn-xs btn-danger', title: 'Logout', :method => :delete) %></li>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <%= link_to ('<i class="fa fa-user"></i> ' + truncate(current_user.email, length: 25)).html_safe, edit_user_registration_path, title: 'Edit Profile', class: 'dropdown-item' %>
+                <%= link_to('Logout', destroy_user_session_path, class: 'btn btn-xs btn-danger', title: 'Logout', class: 'dropdown-item', :method => :delete) %>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
 
           <% else %>
 
-          <li class="nav-item">
-
-            <%= link_to('Pricing', new_user_session_path, class: 'nav-link', title: 'Pricing') %>
-
-          </li>
+            <li class="nav-item"></li>
             <li class="nav-item">
 
               <%= link_to('Sign In', new_user_session_path, class: 'nav-link', title: 'Sign In') %>
@@ -46,15 +46,7 @@
             </li>
 
           <% end %>
-          <% if current_user %>
 
-            <li>
-
-              <%= link_to "<i class='fa fa-users'></i> Add Members".html_safe, new_member_path, class: 'navbar-link btn btn-primary' %>
-
-            </li>
-
-          <% end %>
         </ul>
 
       </div>
