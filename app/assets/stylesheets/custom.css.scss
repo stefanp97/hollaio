@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans');
 @import "bootstrap";
 $grey: #f4f4f5;
+$lavendel: #80AEF9;
+$lavendel-dark: #8900F8;
 
 body {
   font-family: 'Open Sans', sans-serif;
@@ -9,6 +11,11 @@ body {
   .navbar {
     height: 70px!important;
     background-color: white!important;
+
+    .btn-signup {
+      background-color: $lavendel!important;
+      border-color: $lavendel!important;
+    }
   }
 
   .navbar-brand {
@@ -21,17 +28,33 @@ body {
     font-family: 'Lato', sans-serif!important;
   }
 
-  section#cta-main {
-    padding-top: 60px;
-    min-height: 30vh;
-    max-height: 30vh;
-    height: 30vh;
+  .cta-main,
+  .jumbotron-fluid {
     background-image: linear-gradient(135deg, #CE9FFC 10%, #7367F0 100%);
+    min-height: 570px;
 
     .copy-header-h1 {
       font-size: 58px;
       font-weight: 700;
       color: white;
+    }
+
+    p.lead {
+      color: white;
+    }
+
+    a.btn {
+      background-color: transparent;
+      border-color: white;
+      color: white;
+
+      &:active,
+      &:hover,
+      &:visited {
+        background-color: transparent;
+        border-color: white;
+        color: white;
+      }
     }
   }
 
@@ -69,6 +92,11 @@ body {
       font-size: 40px;
       font-weight: 700;
     }
+
+    .btn-signup {
+      background-color: $lavendel;
+      border-color: $lavendel;
+    }
   }
 
   section#footer {
@@ -86,5 +114,9 @@ body {
         }
       }
     }
+  }
+  main#application-wrap {
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 }

@@ -1,34 +1,41 @@
 <% if current_user %>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-12">
-        <h3>Dashboard:
-          <%= @tenant.name %></h3>
-        <% if current_user %>
+  <main id="application-wrap">
 
-          <li>
-
-            <%= link_to "<i class='fa fa-users'></i> Add Members".html_safe, new_member_path, class: 'navbar-link btn btn-primary' %>
-
-          </li>
-
-        <% end %>
-      </div>
-    </div>
-  </div>
-
-<% else %>
-  <section id="cta-main">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h1 class="copy copy-header copy-header-h1">Meetings done right</h1>
+          <h3>Dashboard:</h3>
+        <p> <%= @tenant.name %></p>
+
+        </div>
+      </div>
+      <div class="row">
+<div class="col-md-3 offset-md-8">
+  <% if current_user %>
+
+    <li>
+
+      <%= link_to "<i class='fa fa-users'></i> Add Members".html_safe, new_member_path, class: 'navbar-link btn btn-primary' %>
+
+    </li>
+
+  <% end %>
+</div>
+      </div>
+    </div>
+  </main>
+<% else %>
+  <div class="jumbotron jumbotron-fluid cta-main">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="copy copy-header copy-header-h1 display-4">Meetings done right</h1>
+          <p class="lead">Lorem ipsum et dolor sit amet.</p>
           <%= link_to('Sign Up - Its Free!', new_user_registration_path, class: 'btn btn-primary', title: 'Sign Up') %>
         </div>
       </div>
     </div>
-
-  </section>
+  </div>
   <section id="intro">
     <div class="container">
       <div class="row">
@@ -112,7 +119,7 @@
             What are you waiting for?
           </h2>
           <p>Get started in 30 seconds</p>
-          <%= link_to('Sign Up - Its Free!', new_user_registration_path, class: 'btn btn-primary', title: 'Sign Up') %>
+          <%= link_to('Sign Up - Its Free!', new_user_registration_path, class: 'btn btn-primary btn-signup', title: 'Sign Up') %>
         </div>
       </div>
 
