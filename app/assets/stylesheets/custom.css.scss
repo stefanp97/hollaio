@@ -11,6 +11,7 @@ body {
   .navbar {
     height: 70px!important;
     background-color: white!important;
+    margin-bottom: 40px;
 
     .btn-signup {
       background-color: $lavendel!important;
@@ -34,6 +35,7 @@ body {
 
   .cta-main,
   .jumbotron-fluid {
+    margin-top: -40px;
     background-image: linear-gradient(135deg, #CE9FFC 10%, #7367F0 100%);
     min-height: 570px;
 
