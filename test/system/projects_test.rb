@@ -16,8 +16,6 @@ class ProjectsTest < ApplicationSystemTestCase
 
     fill_in "Details", with: @project.details
     fill_in "Expected Completion Date", with: @project.expected_completion_date
-    fill_in "Priority", with: @project.priority
-    fill_in "Status", with: @project.status
     fill_in "Tenant", with: @project.tenant_id
     fill_in "Title", with: @project.title
     click_on "Create Project"
@@ -32,8 +30,6 @@ class ProjectsTest < ApplicationSystemTestCase
 
     fill_in "Details", with: @project.details
     fill_in "Expected Completion Date", with: @project.expected_completion_date
-    fill_in "Priority", with: @project.priority
-    fill_in "Status", with: @project.status
     fill_in "Tenant", with: @project.tenant_id
     fill_in "Title", with: @project.title
     click_on "Update Project"

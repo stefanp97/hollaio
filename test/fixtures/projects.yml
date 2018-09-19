@@ -3,15 +3,11 @@
 one:
   title: MyString
   details: MyString
-  priority: MyString
-  status: MyString
-  expected_completion_date: 2018-09-16
+  expected_completion_date: 2018-09-19
   tenant: one
 
 two:
   title: MyString
   details: MyString
-  priority: MyString
-  status: MyString
-  expected_completion_date: 2018-09-16
+  expected_completion_date: 2018-09-19
   tenant: two

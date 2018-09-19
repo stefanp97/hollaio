@@ -42,7 +42,6 @@ class ProjectsController < ApplicationController
     respond_to do |format|
       if @project.update(project_params)
         format.html { redirect_to root_url, notice: 'Project was successfully updated.' }
-        format.json { render :show, status: :ok, location: @project }
       else
         format.html { render :edit }
       end
@@ -67,15 +66,14 @@ class ProjectsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-      params.require(:project).permit(:title, :details, :priority, :status, :expected_completion_date, :tenant_id)
+      params.require(:project).permit(:title, :details, :expected_completion_date, :tenant_id)
     end
     def set_tenant
       @tenant = Tenant.find(params[:tenant_id])
     end
     def verify_tenant
       unless params[:tenant_id] == Tenant.current_tenant_id.to_s
-        redirect_to :root,
-        flash: { error: 'You are not authorized to access any Team other than your own'}
+        redirect_to :root, flash: {error: 'Sorry, you can only view your teams tasks'}
       end
     end
 end

@@ -1,4 +1,10 @@
-<p id="notice"><%= notice %></p>
+<div class="page-header">
+
+<h3><%= @project.title %></h3>
+
+<h3><small>Organization - <%= tenant_name @project.tenant_id %></small></h3>
+
+</div>
 
 <p>
   <strong>Title:</strong>
@@ -11,16 +17,6 @@
 </p>
 
 <p>
-  <strong>Priority:</strong>
-  <%= @project.priority %>
-</p>
-
-<p>
-  <strong>Status:</strong>
-  <%= @project.status %>
-</p>
-
-<p>
   <strong>Expected completion date:</strong>
   <%= @project.expected_completion_date %>
 </p>
@@ -30,5 +26,20 @@
   <%= @project.tenant %>
 </p>
 
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+<%= link_to '< Back to Organization Home', root_path, :class => 'btn btn-default' %>
+
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+
+edit_tenant_project_path(project: @project, tenant: @project.tenant_id), :class => 'btn btn-default' %>
+
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+
+tenant_project_path(@project, @project.tenant_id),
+
+:method => 'delete',
+
+:data => { :confirm => t('.confirm', :default => t("helpers.links.confirm",
+
+:default => 'Are you sure?')) },
+
+:class => 'btn btn-danger' %>
