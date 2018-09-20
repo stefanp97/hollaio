@@ -17,6 +17,7 @@ body {
       background-color: $lavendel!important;
       border-color: $lavendel!important;
     }
+
     .nav-item .dropdown-toggle {
       font-size: 25px!important;
       padding-left: 25px!important;
@@ -121,8 +122,25 @@ body {
       }
     }
   }
+
   main#application-wrap {
     padding-top: 60px;
     padding-bottom: 60px;
+  }
+
+  .helper-list {
+    list-style: none;
+
+    .add-members-link {
+      background-image: url('plus.svg');
+      background-color: transparent;
+      border-radius: 50%;
+      height: 45px;
+      width: 45px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      border-color: transparent;
+    }
   }
 }
