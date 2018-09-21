@@ -14,6 +14,9 @@ body {
     height: 70px!important;
     background-color: white!important;
     margin-bottom: 40px;
+    -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
 
     .btn-signup {
       background-color: $lavendel!important;
@@ -147,7 +150,14 @@ body {
     }
   }
 
+  #members-list {
+    margin-bottom: 30px;
+  }
+
   .project-entry-wrap {
+    // border-image: linear-gradient( 135deg, #F97794 10%, #623AA2 100%);
+    // border-image-slice: 1;
+    // border-width: 3px;
     padding-top: 20px;
     padding-bottom: 40px;
     background-color: $grey2;
@@ -183,6 +193,33 @@ body {
       p {
         color: $blue-heading;
       }
+
+      .project-single-entry-ul {
+        list-style: none;
+        padding-left: 25px;
+        margin-bottom: 0;
+
+        span {
+          display: block;
+          width: 14px;
+          height: 14px;
+          background-color: transparent;
+          background-image: url("clock.svg");
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center center;
+          padding-right: 7px;
+        }
+
+        li {
+          color: $blue-heading;
+          display: inline-block;
+        }
+      }
+    }
+
+    &:hover {
+      transform: translateY(-1px);
     }
   }
 }
