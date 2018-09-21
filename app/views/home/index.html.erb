@@ -16,7 +16,7 @@
 
               <li>
 
-                <%= link_to "<i class='fa fa-users'></i>".html_safe, new_member_path, class: 'navbar-link btn btn-primary add-members-link' %>
+                <%= link_to "<i class='fa fa-users'></i>".html_safe, new_member_path, class: 'navbar-link btn btn-primary add-members-link float-right' %>
 
               </li>
             </ul>
@@ -27,7 +27,10 @@
 
         <div class="col-md-12">
           <% if current_user %>
-            <%= render 'projects/list' %>
+            <div class="row">
+              <%= render 'projects/list' %>
+            </div>
+
           <% end %>
         </div>
       </div>

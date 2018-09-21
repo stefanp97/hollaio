@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans');
 @import "bootstrap";
 $grey: #f4f4f5;
+$grey2: #f9f9fa;
+$blue-heading: #707090;
 $lavendel: #80AEF9;
 $lavendel-dark: #8900F8;
 
@@ -132,7 +134,7 @@ body {
     list-style: none;
 
     .add-members-link {
-      background-image: url('plus.svg');
+      background-image: url("plus.svg");
       background-color: transparent;
       border-radius: 50%;
       height: 45px;
@@ -141,6 +143,46 @@ body {
       background-repeat: no-repeat;
       background-position: center center;
       border-color: transparent;
+      display: block;
+    }
+  }
+
+  .project-entry-wrap {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    background-color: $grey2;
+    border-radius: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+
+    h3 {
+      margin-bottom: 20px;
+      font-size: 20px!important;
+      color: $blue-heading!important;
+    }
+
+    .project-single-entry-link {
+      display: block!important;
+      max-width: 260px!important;
+      min-width: 260px!important;
+      margin: 0 auto!important;
+      text-decoration: none!important;
+    }
+
+    .project-single-entry {
+      padding-top: 7px;
+      padding-bottom: 7px;
+      max-width: 260px;
+      min-width: 260px;
+      margin: 0 auto;
+      min-height: 140px;
+      background-color: white;
+      border-radius: 10px;
+
+      p {
+        color: $blue-heading;
+      }
     }
   }
 }
