@@ -31,7 +31,7 @@
         <% end %>
         <% if (@tenant.can_create_projects?) %>
 
-          <%= link_to 'New Project', new_tenant_project_path(tenant_id: @tenant.id), :class => 'btn btn-primary' %>
+          <%= link_to 'New Project', new_tenant_project_path(tenant_id: @tenant.id), :class => 'btn btn-primary btn-new-task' %>
 
         <% end %>
       </div>
@@ -40,12 +40,12 @@
 
     <% end %>
   <% else %>
-    <p class="lead">You don't have any projects</p>
+    <p class="lead">You don't have any Tasks</p>
 
   <% end %>
 
   <% if (@tenant.can_create_projects?) %>
 
-    <%= link_to 'New Project', new_tenant_project_path(tenant_id: @tenant.id), :class => 'btn btn-primary' %>
+    <%= link_to 'New Task', new_tenant_project_path(tenant_id: @tenant.id), :class => 'btn btn-primary btn-new-task' %>
 
   <% end %>

@@ -10,6 +10,11 @@ body {
   font-family: 'Open Sans', sans-serif;
   background-color: $grey;
 
+  // .btn-primary {
+  //   background-color: $lavendel!important;
+  //   border-color: $lavendel!important;
+  // }
+
   .navbar {
     height: 70px!important;
     background-color: white!important;
@@ -216,6 +221,11 @@ body {
           display: inline-block;
         }
       }
+    }
+
+    .btn-new-task {
+      background-color: $lavendel!important;
+      border-color: $lavendel!important;
     }
 
     &:hover {

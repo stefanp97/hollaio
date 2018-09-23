@@ -1,5 +1,4 @@
-<div class="container">
-  <div class="row">
+
     <%= form_for [@tenant, @project], :html => { :class => "form-horizontal project" } do |f| %>
 
     <% if @project.errors.any? %>
@@ -49,6 +48,3 @@
     </div>
 
   <% end %>
-
-</div>
-</div>
